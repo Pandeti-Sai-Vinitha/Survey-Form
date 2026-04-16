@@ -21,28 +21,48 @@ app.add_middleware(
 init_db()
 
 
+
 class SurveyResponse(BaseModel):
     name: str
     project_name: str
-    q1: str = None
-    q2: str = None
-    q3: str = None
-    q4: str = None
-    q5: str = None
-    q6: str = None
-    q7: str = None
-    q8: str = None
-    q9: str = None
-    q10: str = None
-    q11: str = None
-    q12: str = None
-    q13: str = None
-    q14: str = None
-    q15: str = None
-    q16: str = None
-    q17: str = None
-    q18: str = None
-    q19: str = None
+    q1_answer: str = None
+    q1_score: int = None
+    q2_answer: str = None
+    q2_score: int = None
+    q3_answer: str = None
+    q3_score: int = None
+    q4_answer: str = None
+    q4_score: int = None
+    q5_answer: str = None
+    q5_score: int = None
+    q6_answer: str = None
+    q6_score: int = None
+    q7_answer: str = None
+    q7_score: int = None
+    q8_answer: str = None
+    q8_score: int = None
+    q9_answer: str = None
+    q9_score: int = None
+    q10_answer: str = None
+    q10_score: int = None
+    q11_answer: str = None
+    q11_score: int = None
+    q12_answer: str = None
+    q12_score: int = None
+    q13_answer: str = None
+    q13_score: int = None
+    q14_answer: str = None
+    q14_score: int = None
+    q15_answer: str = None
+    q15_score: int = None
+    q16_answer: str = None
+    q16_score: int = None
+    q17_answer: str = None
+    q17_score: int = None
+    q18_answer: str = None
+    q18_score: int = None
+    q19_answer: str = None
+    q19_score: int = None
 
 
 @app.post("/submit", status_code=201)

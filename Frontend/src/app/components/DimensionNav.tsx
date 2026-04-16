@@ -12,8 +12,8 @@ interface DimensionNavProps {
 
 export default function DimensionNav({ dimensions, currentDimension }: DimensionNavProps) {
   return (
-    <nav className="space-y-2">
-      <h3 className="text-xs uppercase tracking-wider text-muted-foreground mb-4 px-4">
+    <nav className="space-y-1 text-xs">
+      <h3 className="text-xs uppercase tracking-wider text-muted-foreground mb-2 px-3 mt-6">
         Dimensions
       </h3>
       {dimensions.map((dimension) => {
@@ -24,24 +24,24 @@ export default function DimensionNav({ dimensions, currentDimension }: Dimension
           <div
             key={dimension.id}
             className={`
-              px-4 py-3 rounded-lg transition-all
+              px-3 py-2 rounded-lg transition-all
               ${isActive ? 'bg-accent/10' : 'hover:bg-secondary'}
             `}
           >
-            <div className="flex items-center gap-3 mb-2">
+            <div className="flex items-center gap-2 mb-1">
               <div className={`
-                w-8 h-8 rounded-full flex items-center justify-center text-sm
+                w-6 h-6 rounded-full flex items-center justify-center text-xs
                 ${isActive ? 'bg-accent text-white' : 'bg-muted text-muted-foreground'}
               `} style={{ fontFamily: 'var(--font-display)' }}>
                 {dimension.id}
               </div>
               <div className="flex-1">
-                <div className={`text-sm ${isActive ? 'text-foreground' : 'text-muted-foreground'}`}>
+                <div className={`text-xs ${isActive ? 'text-foreground' : 'text-muted-foreground'}`}>
                   {dimension.name}
                 </div>
               </div>
             </div>
-            <div className="ml-11">
+            <div className="ml-8">
               <div className="flex items-center gap-2 text-xs text-muted-foreground mb-1">
                 <span>{dimension.completed}/{dimension.questionCount}</span>
               </div>

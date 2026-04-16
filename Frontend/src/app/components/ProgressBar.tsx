@@ -9,8 +9,8 @@ export default function ProgressBar({ current, total }: ProgressBarProps) {
   return (
     <div className="w-full">
       <div className="flex justify-between items-baseline mb-2">
-        <span className="text-sm text-muted-foreground">Survey Progress</span>
-        <span className="text-sm" style={{ fontFamily: 'var(--font-display)' }}>
+        <span className="text-[12px] text-muted-foreground pb-1">Survey Progress</span>
+        <span className="text-[12px]" style={{ fontFamily: 'var(--font-display)' }}>
           {current} of {total}
         </span>
       </div>
